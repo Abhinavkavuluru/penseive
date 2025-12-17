@@ -1,0 +1,1036 @@
+2025-11-25 12:59:44.428390: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-25 12:59:44.877579: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2025-11-25 12:59:44.880050: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-25 12:59:47.002073: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2025-11-25 12:59:49.701173: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2025-11-25 12:59:49.702219: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2025-11-25 12:59:49.813682: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2025-11-25 12:59:49.820902: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2025-11-25 12:59:49.964283: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2025-11-25 12:59:49.973096: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+2025-11-25 12:59:49.980977: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+2025-11-25 12:59:50.043748: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2025-11-25 12:59:50.047932: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+2025-11-25 12:59:50.147939: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2025-11-25 12:59:50.152442: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+2025-11-25 12:59:50.919867: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+2025-11-25 12:59:51.017371: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+2025-11-25 12:59:51.116206: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+2025-11-25 12:59:51.150482: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+2025-11-25 12:59:51.181054: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+2025-11-25 12:59:51.210618: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:68: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:71: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+2025-11-25 12:59:55.131948: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:75: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:78: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:81: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:84: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:86: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:87: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:88: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:92: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:93: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, self.a_dim, activation=tf.nn.softmax)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/util/dispatch.py:1176: calling reduce_sum_v1 (from tensorflow.python.ops.math_ops) with keep_dims is deprecated and will be removed in a future version.
+Instructions for updating:
+keep_dims is deprecated, use keepdims instead
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+2025-11-25 12:59:56.452123: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+WARNING:tensorflow:From /usr/local/lib/python3.10/dist-packages/tensorflow/python/training/rmsprop.py:188: calling Ones.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+2025-11-25 12:59:56.682568: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+2025-11-25 12:59:56.715057: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+2025-11-25 12:59:56.742165: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+2025-11-25 12:59:56.854403: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+2025-11-25 12:59:56.857750: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+2025-11-25 12:59:56.955784: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+2025-11-25 12:59:56.973976: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:179: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_0 = tf.layers.dense(split_0, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+2025-11-25 12:59:57.039569: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:182: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_1 = tf.layers.dense(split_1, 128, activation=tf.nn.relu)
+2025-11-25 12:59:57.093811: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+Process Process-2:
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:186: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_2 = tf.layers.conv1d(split_2, 128, 4, activation=tf.nn.relu)
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:189: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_3 = tf.layers.conv1d(split_3, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+Process Process-5:
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:192: UserWarning: `tf.layers.conv1d` is deprecated and will be removed in a future version. Please Use `tf.keras.layers.Conv1D` instead.
+  split_4 = tf.layers.conv1d(split_4, 128, 4, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+2025-11-25 12:59:57.379599: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+2025-11-25 12:59:57.396497: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:195: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  split_5 = tf.layers.dense(split_5, 128, activation=tf.nn.relu)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:197: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_2_flat = tf.layers.flatten(split_2)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:198: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_3_flat = tf.layers.flatten(split_3)
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:199: UserWarning: `tf.layers.flatten` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Flatten` instead.
+  split_4_flat = tf.layers.flatten(split_4)
+Process Process-10:
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:203: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
+Process Process-14:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/a3c.py:204: UserWarning: `tf.layers.dense` is deprecated and will be removed in a future version. Please use `tf.keras.layers.Dense` instead.
+  out = tf.layers.dense(dense_net_0, 1, activation=None)
+Process Process-9:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+Process Process-12:
+Process Process-7:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+Process Process-6:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+2025-11-25 12:59:57.744859: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+Process Process-11:
+Process Process-13:
+Process Process-8:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+2025-11-25 12:59:57.894968: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+Process Process-16:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+2025-11-25 12:59:58.060395: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+Process Process-3:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+Process Process-4:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+2025-11-25 12:59:58.173096: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:375] MLIR V1 optimization pass is not enabled
+Process Process-17:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'
+Process Process-15:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/mnt/c/Users/91630/OneDrive/Desktop/freelancer/pensieve/sim/multi_agent.py", line 297, in agent
+    log_file.write(str(time_stamp) + '\t' +
+TypeError: a bytes-like object is required, not 'str'

@@ -1,0 +1,66 @@
+Understanding Pensieve: Data, Videos, and Testing
+1. Where is the Dataset? (Network Traces)
+The "dataset" for Pensieve is network bandwidth traces, not images or video files.
+
+Location
+Training Traces: sim/cooked_traces/
+Testing Traces: test/cooked_traces/
+What's inside a trace file?
+Each file (e.g., trace_5mbps) is a simple text file where each line represents a timestamp and the available bandwidth at that moment.
+
+Format:
+
+<timestamp_in_seconds> <bandwidth_in_Mbps>
+Example:
+
+0.01 4.5
+0.02 4.8
+0.03 5.1
+...
+How it's used: The simulator (multi_agent.py or env.py) reads these files to simulate a network connection. When the agent downloads a video chunk, the simulator calculates how long it takes based on the bandwidth available at that specific timestamp in the trace file.
+
+2. Where are the Videos? (Simulated)
+The project does not use actual .mp4 video files for training or simulation testing. Instead, it uses video size files to simulate the properties of a video.
+
+Location
+sim/video_size_0 to sim/video_size_5
+test/video_size_0 to test/video_size_5
+What's inside?
+Each file corresponds to a specific quality level (bitrate). Each line represents the size in bytes of a 4-second video chunk.
+
+Example (video_size_0 - Lowest Quality):
+
+181801  <-- Size of chunk 1 (bytes)
+155580  <-- Size of chunk 2 (bytes)
+139857  <-- Size of chunk 3 (bytes)
+...
+Why do this? To train the RL model, we only need to know:
+
+How big the chunk is (to calculate download time).
+What quality it represents (to calculate reward). We don't need to actually decode or display pixels. This makes training millions of times faster.
+3. How is Testing Done?
+Testing compares how well different algorithms manage video streaming under the same network conditions.
+
+The Metric: Quality of Experience (QoE)
+The "score" or Reward is calculated for every chunk downloaded:
+
+$$ \text{Reward} = \text{Quality} - 4.3 \times \text{Rebuffering} - \text{Smoothness} $$
+
+Quality: Higher bitrate = Better (+).
+Rebuffering: Video freezing = Terrible (-). This has a high penalty (4.3).
+Smoothness: Changing quality frequently (e.g., 1080p → 240p → 1080p) = Bad (-).
+The Process
+Setup: We take a network trace (e.g., trace_5mbps).
+Run Algorithm: The algorithm (BB, MPC, or Pensieve) decides which quality to download for each chunk.
+Simulate: The environment calculates:
+How long the download took (based on trace).
+If the video buffer ran out (rebuffering).
+Log: We record the reward for every chunk.
+Compare: We sum up the total reward for the entire session.
+Comparison Example
+Buffer-Based (BB): Might pick high quality but cause rebuffering because it didn't predict a bandwidth drop. Lower Score.
+Pensieve (RL): Learns to lower quality before the drop, avoiding rebuffering. Higher Score.
+Summary
+Data: Network bandwidth logs (cooked_traces).
+Videos: Lists of chunk sizes (video_size_*).
+Goal: Maximize total Reward (High Quality + No Rebuffering + Smooth Playback).
