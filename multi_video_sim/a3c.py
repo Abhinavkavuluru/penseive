@@ -1,6 +1,13 @@
+# Suppress warnings
+import warnings
+warnings.filterwarnings('ignore')
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
 import numpy as np
-import tensorflow as tf
-import tflearn
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+tf.logging.set_verbosity(tf.logging.ERROR)
 
 
 GAMMA = 0.99
@@ -51,11 +58,11 @@ class ActorNetwork(object):
         self.act_grad_weights = tf.placeholder(tf.float32, [None, 1])
 
         # Compute the objective (log action_vector and entropy)
-        self.obj = tf.reduce_sum(tf.mul(
-                       tf.log(tf.reduce_sum(tf.mul(self.out, self.acts),
-                                            reduction_indices=1, keep_dims=True)),
+        self.obj = tf.reduce_sum(tf.multiply(
+                       tf.log(tf.reduce_sum(tf.multiply(self.out, self.acts),
+                                            axis=1, keepdims=True)),
                        -self.act_grad_weights)) \
-                   + ENTROPY_WEIGHT * tf.reduce_sum(tf.mul(self.out,
+                   + ENTROPY_WEIGHT * tf.reduce_sum(tf.multiply(self.out,
                                                            tf.log(self.out + ENTROPY_EPS)))
 
         # Combine the gradients here
@@ -67,28 +74,39 @@ class ActorNetwork(object):
 
     def create_actor_network(self):
         with tf.variable_scope('actor'):
-            inputs = tflearn.input_data(shape=[None, self.s_dim[0], self.s_dim[1]])
+            inputs = tf.placeholder(tf.float32, shape=[None, self.s_dim[0], self.s_dim[1]])
 
-            split_0 = tflearn.fully_connected(inputs[:, 0:1, -1], 64, activation='relu')
-            split_1 = tflearn.fully_connected(inputs[:, 1:2, -1], 64, activation='relu')
-            split_2 = tflearn.fully_connected(inputs[:, 4:5, -1], 64, activation='relu')
+            # Split inputs and process each part
+            split_0 = tf.reshape(inputs[:, 0:1, -1], [-1, 1])
+            split_0 = tf.layers.dense(split_0, 64, activation=tf.nn.relu)
 
-            reshape_0 = tflearn.reshape(inputs[:, 2:4, :], [-1, 2, self.s_dim[1], 1])
-            split_3 = tflearn.conv_2d(reshape_0, 128, 3, activation='relu')
+            split_1 = tf.reshape(inputs[:, 1:2, -1], [-1, 1])
+            split_1 = tf.layers.dense(split_1, 64, activation=tf.nn.relu)
 
-            split_4 = tflearn.conv_1d(inputs[:, 5:6, :], 128, 4, activation='relu')
-            split_5 = tflearn.conv_1d(inputs[:, 6:7, :], 128, 4, activation='relu')
+            split_2 = tf.reshape(inputs[:, 4:5, -1], [-1, 1])
+            split_2 = tf.layers.dense(split_2, 64, activation=tf.nn.relu)
 
-            flatten_0 = tflearn.flatten(split_3)
-            flatten_1 = tflearn.flatten(split_4)
-            flatten_2 = tflearn.flatten(split_5)
+            # 2D convolution for bandwidth history
+            reshape_0 = tf.reshape(inputs[:, 2:4, :], [-1, 2, self.s_dim[1], 1])
+            split_3 = tf.layers.conv2d(reshape_0, 128, [2, 3], activation=tf.nn.relu)
+            flatten_0 = tf.layers.flatten(split_3)
 
-            merge_net = tflearn.merge([split_0, split_1, split_2, flatten_0, flatten_1, flatten_2], 'concat')
+            # 1D convolution for next chunk sizes
+            split_4_input = tf.reshape(inputs[:, 5:6, :], [-1, self.s_dim[1], 1])
+            split_4 = tf.layers.conv1d(split_4_input, 128, 4, activation=tf.nn.relu)
+            flatten_1 = tf.layers.flatten(split_4)
 
-            dense_net_0 = tflearn.fully_connected(merge_net, 128, activation='relu')
+            # 1D convolution for mask
+            split_5_input = tf.reshape(inputs[:, 6:7, :], [-1, self.s_dim[1], 1])
+            split_5 = tf.layers.conv1d(split_5_input, 128, 4, activation=tf.nn.relu)
+            flatten_2 = tf.layers.flatten(split_5)
+
+            merge_net = tf.concat([split_0, split_1, split_2, flatten_0, flatten_1, flatten_2], axis=1)
+
+            dense_net_0 = tf.layers.dense(merge_net, 128, activation=tf.nn.relu)
 
             # for multiple video, mask out the invalid actions
-            linear_out = tflearn.fully_connected(dense_net_0, self.a_dim, activation='linear')
+            linear_out = tf.layers.dense(dense_net_0, self.a_dim, activation=None)
             linear_out = tf.transpose(linear_out)  # [None, a_dim] -> [a_dim, None]
             mask_out = tf.boolean_mask(linear_out, self.mask)  # [a_dim, None] -> [masked, None]
             mask_out = tf.transpose(mask_out)  # [masked, None] -> [None, masked]
@@ -98,7 +116,7 @@ class ActorNetwork(object):
 
     def train(self, inputs, acts, act_grad_weights):
         # there can be only one kind of mask in a training epoch
-        for i in xrange(inputs.shape[0]):
+        for i in range(inputs.shape[0]):
             assert np.all(inputs[0, MASK_DIM, -MAX_BR_LEVELS:] == \
                           inputs[i, MASK_DIM, -MAX_BR_LEVELS:])
 
@@ -113,7 +131,7 @@ class ActorNetwork(object):
         })
 
     def predict(self, inputs):
-        for i in xrange(inputs.shape[0]):
+        for i in range(inputs.shape[0]):
             assert np.all(inputs[0, MASK_DIM, -MAX_BR_LEVELS:] == \
                           inputs[i, MASK_DIM, -MAX_BR_LEVELS:])
 
@@ -123,7 +141,7 @@ class ActorNetwork(object):
         })
 
     def get_gradients(self, inputs, acts, act_grad_weights):
-        for i in xrange(inputs.shape[0]):
+        for i in range(inputs.shape[0]):
             assert np.all(inputs[0, MASK_DIM, -MAX_BR_LEVELS:] == \
                           inputs[i, MASK_DIM, -MAX_BR_LEVELS:])
 
@@ -178,10 +196,10 @@ class CriticNetwork(object):
         self.td_target = tf.placeholder(tf.float32, [None, 1])
 
         # Temporal Difference, will also be weights for actor_gradients
-        self.td = tf.sub(self.td_target, self.out)
+        self.td = tf.subtract(self.td_target, self.out)
 
         # Mean square error
-        self.loss = tflearn.mean_square(self.td_target, self.out)
+        self.loss = tf.reduce_mean(tf.square(self.td_target - self.out))
 
         # Compute critic gradient
         self.critic_gradients = tf.gradients(self.loss, self.network_params)
@@ -192,25 +210,36 @@ class CriticNetwork(object):
 
     def create_critic_network(self):
         with tf.variable_scope('critic'):
-            inputs = tflearn.input_data(shape=[None, self.s_dim[0], self.s_dim[1]])
-            split_0 = tflearn.fully_connected(inputs[:, 0:1, -1], 64, activation='relu')
-            split_1 = tflearn.fully_connected(inputs[:, 1:2, -1], 64, activation='relu')
-            split_2 = tflearn.fully_connected(inputs[:, 4:5, -1], 64, activation='relu')
+            inputs = tf.placeholder(tf.float32, shape=[None, self.s_dim[0], self.s_dim[1]])
 
-            reshape_0 = tflearn.reshape(inputs[:, 2:4, :], [-1, 2, self.s_dim[1], 1])
-            split_3 = tflearn.conv_2d(reshape_0, 128, 3, activation='relu')
+            split_0 = tf.reshape(inputs[:, 0:1, -1], [-1, 1])
+            split_0 = tf.layers.dense(split_0, 64, activation=tf.nn.relu)
 
-            split_4 = tflearn.conv_1d(inputs[:, 5:6, :], 128, 4, activation='relu')
-            split_5 = tflearn.conv_1d(inputs[:, 6:7, :], 128, 4, activation='relu')
+            split_1 = tf.reshape(inputs[:, 1:2, -1], [-1, 1])
+            split_1 = tf.layers.dense(split_1, 64, activation=tf.nn.relu)
 
-            flatten_0 = tflearn.flatten(split_3)
-            flatten_1 = tflearn.flatten(split_4)
-            flatten_2 = tflearn.flatten(split_5)
+            split_2 = tf.reshape(inputs[:, 4:5, -1], [-1, 1])
+            split_2 = tf.layers.dense(split_2, 64, activation=tf.nn.relu)
 
-            merge_net = tflearn.merge([split_0, split_1, split_2, flatten_0, flatten_1, flatten_2], 'concat')
+            # 2D convolution for bandwidth history
+            reshape_0 = tf.reshape(inputs[:, 2:4, :], [-1, 2, self.s_dim[1], 1])
+            split_3 = tf.layers.conv2d(reshape_0, 128, [2, 3], activation=tf.nn.relu)
+            flatten_0 = tf.layers.flatten(split_3)
 
-            dense_net_0 = tflearn.fully_connected(merge_net, 100, activation='relu')
-            out = tflearn.fully_connected(dense_net_0, 1, activation='linear')
+            # 1D convolution for next chunk sizes
+            split_4_input = tf.reshape(inputs[:, 5:6, :], [-1, self.s_dim[1], 1])
+            split_4 = tf.layers.conv1d(split_4_input, 128, 4, activation=tf.nn.relu)
+            flatten_1 = tf.layers.flatten(split_4)
+
+            # 1D convolution for mask
+            split_5_input = tf.reshape(inputs[:, 6:7, :], [-1, self.s_dim[1], 1])
+            split_5 = tf.layers.conv1d(split_5_input, 128, 4, activation=tf.nn.relu)
+            flatten_2 = tf.layers.flatten(split_5)
+
+            merge_net = tf.concat([split_0, split_1, split_2, flatten_0, flatten_1, flatten_2], axis=1)
+
+            dense_net_0 = tf.layers.dense(merge_net, 100, activation=tf.nn.relu)
+            out = tf.layers.dense(dense_net_0, 1, activation=None)
 
             return inputs, out
 
@@ -270,7 +299,7 @@ def compute_gradients(s_batch, a_batch, r_batch, terminal, actor, critic):
     else:
         R_batch[-1, 0] = v_batch[-1, 0]  # boot strap from last state
 
-    for t in reversed(xrange(ba_size - 1)):
+    for t in reversed(range(ba_size - 1)):
         R_batch[t, 0] = r_batch[t] + GAMMA * R_batch[t + 1, 0]
 
     td_batch = R_batch - v_batch
@@ -288,7 +317,7 @@ def discount(x, gamma):
     """
     out = np.zeros(len(x))
     out[-1] = x[-1]
-    for i in reversed(xrange(len(x)-1)):
+    for i in reversed(range(len(x)-1)):
         out[i] = x[i] + gamma*out[i+1]
     assert x.ndim >= 1
     # More efficient version:
@@ -302,7 +331,7 @@ def compute_entropy(x):
     H(x) = - sum( p * log(p))
     """
     H = 0.0
-    for i in xrange(len(x)):
+    for i in range(len(x)):
         if 0 < x[i] < 1:
             H -= x[i] * np.log(x[i])
     return H
@@ -310,13 +339,13 @@ def compute_entropy(x):
 
 def build_summaries():
     td_loss = tf.Variable(0.)
-    tf.scalar_summary("TD_loss", td_loss)
+    tf.summary.scalar("TD_loss", td_loss)
     eps_total_reward = tf.Variable(0.)
-    tf.scalar_summary("Eps_total_reward", eps_total_reward)
+    tf.summary.scalar("Eps_total_reward", eps_total_reward)
     avg_entropy = tf.Variable(0.)
-    tf.scalar_summary("Avg_entropy", avg_entropy)
+    tf.summary.scalar("Avg_entropy", avg_entropy)
 
     summary_vars = [td_loss, eps_total_reward, avg_entropy]
-    summary_ops = tf.merge_all_summaries()
+    summary_ops = tf.summary.merge_all()
 
     return summary_ops, summary_vars

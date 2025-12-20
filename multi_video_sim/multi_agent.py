@@ -1,9 +1,18 @@
+# Suppress warnings
+import warnings
+warnings.filterwarnings('ignore')
 import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # Suppress TensorFlow logging
+os.environ['CUDA_VISIBLE_DEVICES'] = ''
+
 import logging
+logging.getLogger('tensorflow').setLevel(logging.ERROR)
+
 import numpy as np
 import multiprocessing as mp
-os.environ['CUDA_VISIBLE_DEVICES']=''
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+tf.logging.set_verbosity(tf.logging.ERROR)
 import env
 import a3c
 
@@ -30,8 +39,8 @@ SUMMARY_DIR = './results'
 LOG_FILE = './results/log'
 TEST_LOG_FOLDER = './test_results/'
 TRAIN_TRACES = './cooked_traces/'
-NN_MODEL = './models/nn_model_ep_13600.ckpt'
-# NN_MODEL = None
+# NN_MODEL = './models/nn_model_ep_13600.ckpt'
+NN_MODEL = None
 
 
 # for multi-video setting,
@@ -49,11 +58,11 @@ def action_to_bitrate(action, mask, a_dim=A_DIM):
     assert action < a_dim
     assert mask[action] == 1
     # index starts at 0, ':' is non-inclusive
-    return np.sum(mask[:action])  
+    return np.sum(mask[:action])
 
 def bitrate_to_action(bitrate, mask, a_dim=A_DIM):
     assert len(mask) == a_dim
-    assert bitrate >= 0 
+    assert bitrate >= 0
     assert bitrate < np.sum(mask)
     cumsum_mask = np.cumsum(mask) - 1
     action = np.where(cumsum_mask == bitrate)[0][0]
@@ -64,16 +73,16 @@ def testing(epoch, nn_model, log_file):
     # clean up the test results folder
     os.system('rm -r ' + TEST_LOG_FOLDER)
     os.system('mkdir ' + TEST_LOG_FOLDER)
-    
+
     # run test script
     os.system('python rl_test.py ' + nn_model)
-    
+
     # append test performance to the log
     rewards = []
     test_log_files = os.listdir(TEST_LOG_FOLDER)
     for test_log_file in test_log_files:
         reward = []
-        with open(TEST_LOG_FOLDER + test_log_file, 'rb') as f:
+        with open(TEST_LOG_FOLDER + test_log_file, 'r') as f:
             for line in f:
                 parse = line.split()
                 try:
@@ -83,6 +92,13 @@ def testing(epoch, nn_model, log_file):
         rewards.append(np.sum(reward[1:]))
 
     rewards = np.array(rewards)
+
+    # Handle empty rewards array
+    if len(rewards) == 0:
+        log_file.write(str(epoch) + '\t' +
+                       'No test data yet' + '\n')
+        log_file.flush()
+        return
 
     rewards_min = np.min(rewards)
     rewards_5per = np.percentile(rewards, 5)
@@ -110,7 +126,7 @@ def central_agent(net_params_queues, exp_queues):
                         filemode='w',
                         level=logging.INFO)
 
-    with tf.Session() as sess, open(LOG_FILE + '_test', 'wb') as test_log_file:
+    with tf.Session() as sess, open(LOG_FILE + '_test', 'w') as test_log_file:
 
         actor = a3c.ActorNetwork(sess,
                                  state_dim=[S_INFO, S_LEN], action_dim=A_DIM,
@@ -138,7 +154,7 @@ def central_agent(net_params_queues, exp_queues):
             # synchronize the network parameters of work agent
             actor_net_params = actor.get_network_params()
             critic_net_params = critic.get_network_params()
-            for i in xrange(NUM_AGENTS):
+            for i in range(NUM_AGENTS):
                 net_params_queues[i].put([actor_net_params, critic_net_params])
 
             # record average reward and td loss change
@@ -147,13 +163,13 @@ def central_agent(net_params_queues, exp_queues):
             total_reward = 0.0
             total_td_loss = 0.0
             total_entropy = 0.0
-            total_agents = 0.0 
+            total_agents = 0.0
 
             # assemble experiences from the agents
             actor_gradient_batch = []
             critic_gradient_batch = []
 
-            for i in xrange(NUM_AGENTS):
+            for i in range(NUM_AGENTS):
                 s_batch, a_batch, r_batch, terminal, info = exp_queues[i].get()
 
                 actor_gradient, critic_gradient, td_batch = \
@@ -163,8 +179,8 @@ def central_agent(net_params_queues, exp_queues):
                         r_batch=np.vstack(r_batch),
                         terminal=terminal, actor=actor, critic=critic)
 
-                for i in xrange(len(actor_gradient)):
-                    assert np.any(np.isnan(actor_gradient[i])) == False
+                for j in range(len(actor_gradient)):
+                    assert np.any(np.isnan(actor_gradient[j])) == False
 
                 actor_gradient_batch.append(actor_gradient)
                 critic_gradient_batch.append(critic_gradient)
@@ -178,15 +194,8 @@ def central_agent(net_params_queues, exp_queues):
             # compute aggregated gradient
             assert NUM_AGENTS == len(actor_gradient_batch)
             assert len(actor_gradient_batch) == len(critic_gradient_batch)
-            # assembled_actor_gradient = actor_gradient_batch[0]
-            # assembled_critic_gradient = critic_gradient_batch[0]
-            # for i in xrange(len(actor_gradient_batch) - 1):
-            #     for j in xrange(len(assembled_actor_gradient)):
-            #             assembled_actor_gradient[j] += actor_gradient_batch[i][j]
-            #             assembled_critic_gradient[j] += critic_gradient_batch[i][j]
-            # actor.apply_gradients(assembled_actor_gradient)
-            # critic.apply_gradients(assembled_critic_gradient)
-            for i in xrange(len(actor_gradient_batch)):
+
+            for i in range(len(actor_gradient_batch)):
                 actor.apply_gradients(actor_gradient_batch[i])
                 critic.apply_gradients(critic_gradient_batch[i])
 
@@ -215,8 +224,8 @@ def central_agent(net_params_queues, exp_queues):
                 save_path = saver.save(sess, MODEL_DIR + "nn_model_ep_" +
                                        str(epoch) + ".ckpt")
                 logging.info("Model saved in file: " + save_path)
-                testing(epoch, 
-                    MODEL_DIR + "nn_model_ep_" + str(epoch) + ".ckpt", 
+                testing(epoch,
+                    MODEL_DIR + "nn_model_ep_" + str(epoch) + ".ckpt",
                     test_log_file)
 
 
@@ -226,7 +235,7 @@ def agent(agent_id, net_params_queue, exp_queue):
                               fixed_env=False,
                               trace_folder=TRAIN_TRACES)
 
-    with tf.Session() as sess, open(LOG_FILE + '_agent_' + str(agent_id), 'wb') as log_file:
+    with tf.Session() as sess, open(LOG_FILE + '_agent_' + str(agent_id), 'w') as log_file:
         actor = a3c.ActorNetwork(sess,
                                  state_dim=[S_INFO, S_LEN], action_dim=A_DIM,
                                  learning_rate=ACTOR_LR_RATE)
@@ -296,7 +305,7 @@ def agent(agent_id, net_params_queue, exp_queue):
             state[4, -1] = video_chunk_remain / float(video_num_chunks)
             state[5, :] = -1
             nxt_chnk_cnt = 0
-            for i in xrange(A_DIM):
+            for i in range(A_DIM):
                 if mask[i] == 1:
                     state[5, i] = next_video_chunk_size[nxt_chnk_cnt] / M_IN_B
                     nxt_chnk_cnt += 1
@@ -374,10 +383,18 @@ def main():
     np.random.seed(RANDOM_SEED)
     assert len(VIDEO_BIT_RATE) == A_DIM
 
+    # create result directory
+    if not os.path.exists(SUMMARY_DIR):
+        os.makedirs(SUMMARY_DIR)
+    if not os.path.exists(MODEL_DIR):
+        os.makedirs(MODEL_DIR)
+    if not os.path.exists(TEST_LOG_FOLDER):
+        os.makedirs(TEST_LOG_FOLDER)
+
     # inter-process communication queues
     net_params_queues = []
     exp_queues = []
-    for i in xrange(NUM_AGENTS):
+    for i in range(NUM_AGENTS):
         net_params_queues.append(mp.Queue(1))
         exp_queues.append(mp.Queue(1))
 
@@ -388,12 +405,12 @@ def main():
     coordinator.start()
 
     agents = []
-    for i in xrange(NUM_AGENTS):
+    for i in range(NUM_AGENTS):
         agents.append(mp.Process(target=agent,
                                  args=(i,
                                        net_params_queues[i],
                                        exp_queues[i])))
-    for i in xrange(NUM_AGENTS):
+    for i in range(NUM_AGENTS):
         agents[i].start()
 
     # wait unit training is done

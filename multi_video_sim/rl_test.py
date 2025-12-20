@@ -2,7 +2,8 @@ import os
 import sys
 os.environ['CUDA_VISIBLE_DEVICES']=''
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 import a3c
 import env
 
@@ -28,7 +29,7 @@ LOG_FILE = './test_results/log_sim_rl'
 TEST_TRACES = './cooked_test_traces/'
 TEST_VIDEO_FOLDER = './test_video/'
 # log in format of time_stamp bit_rate buffer_size rebuffer_time chunk_size download_time reward
-NN_MODEL = sys.argv[1]
+NN_MODEL = sys.argv[1] if len(sys.argv) > 1 else None
 
 
 def action_to_bitrate(action, mask, a_dim=A_DIM):
@@ -37,11 +38,11 @@ def action_to_bitrate(action, mask, a_dim=A_DIM):
     assert action < a_dim
     assert mask[action] == 1
     # index starts at 0, ':' is non-inclusive
-    return np.sum(mask[:action])  
+    return np.sum(mask[:action])
 
 def bitrate_to_action(bitrate, mask, a_dim=A_DIM):
     assert len(mask) == a_dim
-    assert bitrate >= 0 
+    assert bitrate >= 0
     assert bitrate < np.sum(mask)
     cumsum_mask = np.cumsum(mask) - 1
     action = np.where(cumsum_mask == bitrate)[0][0]
@@ -54,12 +55,12 @@ def main():
 
     assert len(VIDEO_BIT_RATE) == A_DIM
 
-    net_env = env.Environment(fixed_env=True, 
-                              trace_folder=TEST_TRACES, 
+    net_env = env.Environment(fixed_env=True,
+                              trace_folder=TEST_TRACES,
                               video_folder=TEST_VIDEO_FOLDER)
 
     log_path = LOG_FILE + '_' + net_env.all_file_names[net_env.trace_idx]
-    log_file = open(log_path, 'wb')
+    log_file = open(log_path, 'w')
 
     with tf.Session() as sess:
 
@@ -140,7 +141,7 @@ def main():
             state[4, -1] = video_chunk_remain / float(video_num_chunks)
             state[5, :] = -1
             nxt_chnk_cnt = 0
-            for i in xrange(A_DIM):
+            for i in range(A_DIM):
                 if mask[i] == 1:
                     state[5, i] = next_video_chunk_size[nxt_chnk_cnt] / M_IN_B
                     nxt_chnk_cnt += 1
@@ -183,7 +184,7 @@ def main():
                     break
 
                 log_path = LOG_FILE + '_' + net_env.all_file_names[net_env.trace_idx]
-                log_file = open(log_path, 'wb')
+                log_file = open(log_path, 'w')
 
 
 if __name__ == '__main__':
