@@ -26,7 +26,6 @@ import subprocess
 import sys
 import threading
 import webbrowser
-from functools import partial
 from time import sleep
 
 
@@ -37,9 +36,11 @@ RL_SERVER_DIR = os.path.join(SCRIPT_DIR, 'rl_server')
 
 def start_video_server(port, directory):
     """Start a simple HTTP server to serve video chunks."""
-    handler = partial(http.server.SimpleHTTPRequestHandler, directory=directory)
 
-    class QuietHandler(handler):
+    class QuietHandler(http.server.SimpleHTTPRequestHandler):
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, directory=directory, **kwargs)
+
         def log_message(self, format, *args):
             pass  # suppress request logs
 
