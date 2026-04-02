@@ -1,23 +1,24 @@
-#!/usr/bin/env python
-from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
-import SocketServer
-import base64
-import urllib
+#!/usr/bin/env python3
+from http.server import BaseHTTPRequestHandler, HTTPServer
 import sys
 import os
 import json
-os.environ['CUDA_VISIBLE_DEVICES']=''
+os.environ['CUDA_VISIBLE_DEVICES'] = ''
 
 import numpy as np
 import tensorflow as tf
 import time
 import a3c
 
+# Use TF1 compatibility mode
+tf_v1 = tf.compat.v1
+tf_v1.disable_eager_execution()
+
 
 S_INFO = 6  # bit_rate, buffer_size, rebuffering_time, bandwidth_measurement, chunk_til_video_end
 S_LEN = 8  # take how many frames in the past
 A_DIM = 6
-VIDEO_BIT_RATE = [300,750,1200,1850,2850,4300]  # Kbps
+VIDEO_BIT_RATE = [300, 750, 1200, 1850, 2850, 4300]  # Kbps
 BITRATE_REWARD = [1, 2, 3, 12, 15, 20]
 BITRATE_REWARD_MAP = {0: 0, 300: 1, 750: 2, 1200: 3, 1850: 12, 2850: 15, 4300: 20}
 M_IN_K = 1000.0
@@ -37,7 +38,7 @@ SUMMARY_DIR = './results'
 LOG_FILE = './results/log'
 # in format of time_stamp bit_rate buffer_size rebuffer_time video_chunk_size download_time reward
 # NN_MODEL = None
-NN_MODEL = '../rl_server/results/pretrain_linear_reward.ckpt'
+NN_MODEL = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'results', 'pretrain_linear_reward.ckpt')
 
 # video chunk sizes
 size_video1 = [2354772, 2123065, 2177073, 2160877, 2233056, 1941625, 2157535, 2290172, 2055469, 2169201, 2173522, 2102452, 2209463, 2275376, 2005399, 2152483, 2289689, 2059512, 2220726, 2156729, 2039773, 2176469, 2221506, 2044075, 2186790, 2105231, 2395588, 1972048, 2134614, 2164140, 2113193, 2147852, 2191074, 2286761, 2307787, 2143948, 1919781, 2147467, 2133870, 2146120, 2108491, 2184571, 2121928, 2219102, 2124950, 2246506, 1961140, 2155012, 1433658]
@@ -49,7 +50,7 @@ size_video6 = [181801, 155580, 139857, 155432, 163442, 126289, 153295, 173849, 1
 
 
 def get_chunk_size(quality, index):
-    if ( index < 0 or index > 48 ):
+    if (index < 0 or index > 48):
         return 0
     # note that the quality and video labels are inverted (i.e., quality 8 is highest and this pertains to video1)
     sizes = {5: size_video1[index], 4: size_video2[index], 3: size_video3[index], 2: size_video4[index], 1: size_video5[index], 0: size_video6[index]}
@@ -73,42 +74,21 @@ def make_request_handler(input_dict):
         def do_POST(self):
             content_length = int(self.headers['Content-Length'])
             post_data = json.loads(self.rfile.read(content_length))
-            print post_data
+            print(post_data)
 
-            if ( 'pastThroughput' in post_data ):
-                # @Hongzi: this is just the summary of throughput/quality at the end of the load
+            if ('pastThroughput' in post_data):
+                # this is just the summary of throughput/quality at the end of the load
                 # so we don't want to use this information to send back a new quality
-                print "Summary: ", post_data
+                print("Summary: ", post_data)
             else:
-                # option 1. reward for just quality
-                # reward = post_data['lastquality']
-                # option 2. combine reward for quality and rebuffer time
-                #           tune up the knob on rebuf to prevent it more
-                # reward = post_data['lastquality'] - 0.1 * (post_data['RebufferTime'] - self.input_dict['last_total_rebuf'])
-                # option 3. give a fixed penalty if video is stalled
-                #           this can reduce the variance in reward signal
-                # reward = post_data['lastquality'] - 10 * ((post_data['RebufferTime'] - self.input_dict['last_total_rebuf']) > 0)
-
-                # option 4. use the metric in SIGCOMM MPC paper
-                rebuffer_time = float(post_data['RebufferTime'] -self.input_dict['last_total_rebuf'])
+                # use the metric in SIGCOMM MPC paper
+                rebuffer_time = float(post_data['RebufferTime'] - self.input_dict['last_total_rebuf'])
 
                 # --linear reward--
                 reward = VIDEO_BIT_RATE[post_data['lastquality']] / M_IN_K \
                         - REBUF_PENALTY * rebuffer_time / M_IN_K \
                         - SMOOTH_PENALTY * np.abs(VIDEO_BIT_RATE[post_data['lastquality']] -
                                                   self.input_dict['last_bit_rate']) / M_IN_K
-
-                # --log reward--
-                # log_bit_rate = np.log(VIDEO_BIT_RATE[post_data['lastquality']] / float(VIDEO_BIT_RATE[0]))   
-                # log_last_bit_rate = np.log(self.input_dict['last_bit_rate'] / float(VIDEO_BIT_RATE[0]))
-
-                # reward = log_bit_rate \
-                #          - 4.3 * rebuffer_time / M_IN_K \
-                #          - SMOOTH_PENALTY * np.abs(log_bit_rate - log_last_bit_rate)
-
-                # --hd reward--
-                # reward = BITRATE_REWARD[post_data['lastquality']] \
-                #         - 8 * rebuffer_time / M_IN_K - np.abs(BITRATE_REWARD[post_data['lastquality']] - BITRATE_REWARD_MAP[self.input_dict['last_bit_rate']])
 
                 self.input_dict['last_bit_rate'] = VIDEO_BIT_RATE[post_data['lastquality']]
                 self.input_dict['last_total_rebuf'] = post_data['RebufferTime']
@@ -131,7 +111,7 @@ def make_request_handler(input_dict):
                 state = np.roll(state, -1, axis=1)
 
                 next_video_chunk_sizes = []
-                for i in xrange(A_DIM):
+                for i in range(A_DIM):
                     next_video_chunk_sizes.append(get_chunk_size(i, self.input_dict['video_chunk_coount']))
 
                 # this should be S_INFO number of terms
@@ -170,7 +150,7 @@ def make_request_handler(input_dict):
                 send_data = str(bit_rate)
 
                 end_of_video = False
-                if ( post_data['lastRequest'] == TOTAL_VIDEO_CHUNKS ):
+                if (post_data['lastRequest'] == TOTAL_VIDEO_CHUNKS):
                     send_data = "REFRESH"
                     end_of_video = True
                     self.input_dict['last_total_rebuf'] = 0
@@ -183,7 +163,7 @@ def make_request_handler(input_dict):
                 self.send_header('Content-Length', len(send_data))
                 self.send_header('Access-Control-Allow-Origin', "*")
                 self.end_headers()
-                self.wfile.write(send_data)
+                self.wfile.write(send_data.encode())
 
                 # record [state, action, reward]
                 # put it here after training, notice there is a shift in reward storage
@@ -194,13 +174,12 @@ def make_request_handler(input_dict):
                     self.s_batch.append(state)
 
         def do_GET(self):
-            print >> sys.stderr, 'GOT REQ'
+            print('GOT REQ', file=sys.stderr)
             self.send_response(200)
-            #self.send_header('Cache-Control', 'Cache-Control: no-cache, no-store, must-revalidate max-age=0')
             self.send_header('Cache-Control', 'max-age=3000')
             self.send_header('Content-Length', 20)
             self.end_headers()
-            self.wfile.write("console.log('here');")
+            self.wfile.write(b"console.log('here');")
 
         def log_message(self, format, *args):
             return
@@ -217,7 +196,7 @@ def run(server_class=HTTPServer, port=8333, log_file_path=LOG_FILE):
     if not os.path.exists(SUMMARY_DIR):
         os.makedirs(SUMMARY_DIR)
 
-    with tf.Session() as sess, open(log_file_path, 'wb') as log_file:
+    with tf_v1.Session() as sess, open(log_file_path, 'w') as log_file:
 
         actor = a3c.ActorNetwork(sess,
                                  state_dim=[S_INFO, S_LEN], action_dim=A_DIM,
@@ -226,8 +205,8 @@ def run(server_class=HTTPServer, port=8333, log_file_path=LOG_FILE):
                                    state_dim=[S_INFO, S_LEN],
                                    learning_rate=CRITIC_LR_RATE)
 
-        sess.run(tf.initialize_all_variables())
-        saver = tf.train.Saver()  # save neural net parameters
+        sess.run(tf_v1.global_variables_initializer())
+        saver = tf_v1.train.Saver()  # save neural net parameters
 
         # restore neural net parameters
         nn_model = NN_MODEL
@@ -264,7 +243,7 @@ def run(server_class=HTTPServer, port=8333, log_file_path=LOG_FILE):
 
         server_address = ('localhost', port)
         httpd = server_class(server_address, handler_class)
-        print 'Listening on port ' + str(port)
+        print('Listening on port ' + str(port))
         httpd.serve_forever()
 
 
@@ -280,7 +259,7 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print "Keyboard interrupted."
+        print("Keyboard interrupted.")
         try:
             sys.exit(0)
         except SystemExit:

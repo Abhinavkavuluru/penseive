@@ -1,1 +1,6 @@
-*.md
+__pycache__/
+*.pyc
+*.pyo
+rl_server/results/log*
+real_exp/results/
+real_exp/chrome_retry_log

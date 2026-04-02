@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+"""
+Cross-platform experiment runner for Pensieve ABR algorithms.
+Works on macOS, Linux, and Windows.
+
+Usage:
+    python run_exp.py
+"""
 import sys
 import os
 import subprocess
@@ -13,36 +21,35 @@ REPEAT_TIME = 10
 
 def main():
 
-	np.random.seed(RANDOM_SEED)
+    np.random.seed(RANDOM_SEED)
 
-	with open('./chrome_retry_log', 'wb') as log:
-		log.write('chrome retry log\n')
-		log.flush()
+    with open('./chrome_retry_log', 'w') as log:
+        log.write('chrome retry log\n')
+        log.flush()
 
-		for rt in xrange(REPEAT_TIME):
-			np.random.shuffle(ABR_ALGO)
-			for abr_algo in ABR_ALGO:
+        for rt in range(REPEAT_TIME):
+            np.random.shuffle(ABR_ALGO)
+            for abr_algo in ABR_ALGO:
 
-				while True:
+                while True:
 
-					script = 'python ' + RUN_SCRIPT + ' ' + \
-							  abr_algo + ' ' + str(RUN_TIME) + ' ' + str(rt)
-					
-					proc = subprocess.Popen(script,
-							  stdout=subprocess.PIPE, 
-							  stderr=subprocess.PIPE, 
-							  shell=True)
+                    script = [sys.executable, RUN_SCRIPT, abr_algo, str(RUN_TIME), str(rt)]
 
-					(out, err) = proc.communicate()
+                    proc = subprocess.Popen(script,
+                              stdout=subprocess.PIPE,
+                              stderr=subprocess.PIPE)
 
-					if out == 'done\n':
-						break
-					else:
-						log.write(abr_algo + '_' + str(rt) + '\n')
-						log.write(out + '\n')
-						log.flush()
+                    (out, err) = proc.communicate()
+                    out = out.decode('utf-8', errors='replace')
+
+                    if out.strip() == 'done':
+                        break
+                    else:
+                        log.write(abr_algo + '_' + str(rt) + '\n')
+                        log.write(out + '\n')
+                        log.flush()
 
 
 
 if __name__ == '__main__':
-	main()
+    main()
